@@ -15,7 +15,7 @@ class SuperUserSeeder extends Seeder
         // Crear el usuario
         $user = User::create([
             'name' => 'And',
-            'email' => 'and@.com',
+            'email' => 'and@correo.com',
             'password' => Hash::make('and'), // Cambia la contraseña
         ]);
 
