@@ -36,9 +36,10 @@ class UserResource extends Resource
                     ->required()
                     ->hiddenOn('edit')
                     ->maxLength(255),
-                Select::make('roles')
-                ->multiple()
-                ->relationship('roles', 'name'),
+                Forms\Components\CheckboxList::make('roles')
+                    ->relationship('roles', 'name')
+                    ->searchable()
+
             ]);
     }
 
