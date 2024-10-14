@@ -8,7 +8,7 @@ use App\Policies\ClientesPolicy;
 use App\Policies\ProductosPolicy;
 use App\Policies\ComprasPolicy;
 use App\Policies\ProveedoresPolicy;
-use App\Policies\UsersPolicy;
+use App\Policies\UserPolicy;
 use App\Policies\RolesPolicy;
 use App\Policies\VentasPolicy;
 use App\Models\Clientes;
