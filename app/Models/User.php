@@ -9,6 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel; 
 
 class User extends Authenticatable
 {
@@ -45,6 +47,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function canAccessPanel(Panel $panel): bool
+    {
+        // Por ahora, permitimos que todos los usuarios accedan al panel
+        // Puedes modificar esta lógica según tus necesidades
+        return true;
+    }
 
     
 }
